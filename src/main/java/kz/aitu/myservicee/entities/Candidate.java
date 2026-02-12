@@ -1,9 +1,18 @@
 package kz.aitu.myservicee.entities;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import jakarta.persistence.*;
+
+import javax.annotation.processing.Generated;
+import java.lang.annotation.Repeatable;
 import java.util.Objects;
 
+@Entity
+@Table(name="candidates")
 public class Candidate {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String fullname;
     private int age;
